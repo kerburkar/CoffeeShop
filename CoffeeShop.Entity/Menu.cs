@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.Entity
 {
-    public class Coffee
+    public class Menu
     {
         public int Id { get; set; }
 
-        public string CoffeeName { get; set; }
+        public string MenuName { get; set; }
 
-        public int CoffeeCategoryId { get; set; }
+        public int CoffeePlaceId { get; set; }
 
-        public CoffeeCategory CoffeeCategory { get; set; }
+        public CoffeePlace CoffeePlace { get; set; }
 
         public virtual List<MenuCoffee> MenuCoffee { get; set; }
     }

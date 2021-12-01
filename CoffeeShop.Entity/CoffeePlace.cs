@@ -20,6 +20,8 @@ namespace CoffeeShop.Entity
 
         public virtual List<Comment> UserComments { get; set; }
 
+        public virtual List<Menu> Menus { get; set; }
+
 
     }
 }
