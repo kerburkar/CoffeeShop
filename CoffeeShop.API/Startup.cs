@@ -18,7 +18,7 @@ namespace CoffeeShop.API
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            //bu bir denemedir.
+            
         }
 
         public IConfiguration Configuration { get; }
