@@ -17,7 +17,7 @@ namespace CoffeeShop.Entity
 
         public City City { get; set; }
 
-        public List<CoffeePlace> CoffeePlaces { get; set; }
+        public virtual List<CoffeePlace> CoffeePlaces { get; set; }
 
 
 

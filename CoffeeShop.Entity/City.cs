@@ -13,7 +13,7 @@ namespace CoffeeShop.Entity
         public string CityName { get; set; }
 
         //şehirlerin bölgeleri list olarak tanımlandı.
-        public List<Region> Regions { get; set; }
+        public virtual List<Region> Regions { get; set; }
 
 
     }

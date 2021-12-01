@@ -18,6 +18,8 @@ namespace CoffeeShop.Entity
 
         public Region Region { get; set; }
 
+        public virtual List<Comment> UserComments { get; set; }
+
 
     }
 }
