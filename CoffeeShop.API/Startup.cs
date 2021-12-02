@@ -1,6 +1,8 @@
+using CoffeeShop.DataAccess.Concrete.EntityFramework.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +30,9 @@ namespace CoffeeShop.API
         {
 
             services.AddControllers();
+            //applicationDbContexte options parametresi tanýmlandý. buradaki option sql server kullanýyor ve baðlantýyý AppSettings.json'dan alýyor.
+            //msConnection: AppSettingsteki connectionun adý.
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MsConnection")));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CoffeeShop.API", Version = "v1" });

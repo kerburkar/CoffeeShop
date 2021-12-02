@@ -18,4 +18,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CoffeeShop.DataAccess\CoffeeShop.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
