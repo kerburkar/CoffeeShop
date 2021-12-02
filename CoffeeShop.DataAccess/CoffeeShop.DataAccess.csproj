@@ -10,10 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CoffeeShop.Entity\CoffeeShop.Entity.csproj" />
   </ItemGroup>
 
