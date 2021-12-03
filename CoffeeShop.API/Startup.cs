@@ -1,3 +1,7 @@
+using CoffeeShop.Business.Abstract;
+using CoffeeShop.Business.Concrete;
+using CoffeeShop.DataAccess.Abstract;
+using CoffeeShop.DataAccess.Concrete.EntityFramework;
 using CoffeeShop.DataAccess.Concrete.EntityFramework.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +34,10 @@ namespace CoffeeShop.API
         {
 
             services.AddControllers();
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            services.AddScoped<ICityRepository, CityRepository>();
+            services.AddTransient<ICityService, CityService>();
+
             //applicationDbContexte options parametresi tanýmlandý. buradaki option sql server kullanýyor ve baðlantýyý AppSettings.json'dan alýyor.
             //msConnection: AppSettingsteki connectionun adý.
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MsConnection")));

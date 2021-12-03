@@ -15,10 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\CoffeeShop.Business\CoffeeShop.Business.csproj" />
     <ProjectReference Include="..\CoffeeShop.DataAccess\CoffeeShop.DataAccess.csproj" />
   </ItemGroup>
 
