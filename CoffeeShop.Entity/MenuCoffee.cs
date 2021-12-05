@@ -14,5 +14,6 @@ namespace CoffeeShop.Entity
 
         public int CoffeeId { get; set; }
         public Coffee Coffee { get; set; }
+        public int Id { get; set; }
     }
 }

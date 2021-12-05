@@ -37,6 +37,13 @@ namespace CoffeeShop.API
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<ICityRepository, CityRepository>();
             services.AddTransient<ICityService, CityService>();
+            services.AddTransient<ICoffeeService, CoffeeService>();
+            services.AddTransient<ICoffeeCategoryService, CoffeeCategoryService>();
+            services.AddTransient<ICoffeePlaceService, CoffeePlaceService>();
+            services.AddTransient<ICommentService, CommentService>();
+            services.AddTransient<IMenuService, MenuService>();
+            services.AddTransient<IMenuCoffeeService, MenuCoffeeService>();
+            services.AddTransient<IRegionService, RegionService>();
 
             //applicationDbContexte options parametresi tanýmlandý. buradaki option sql server kullanýyor ve baðlantýyý AppSettings.json'dan alýyor.
             //msConnection: AppSettingsteki connectionun adý.
